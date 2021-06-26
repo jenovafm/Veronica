@@ -4,7 +4,7 @@ FROM jokokendil/ambohju:buster
 #
 # Kaisar
 #
-RUN git clone -b Kaisar-userbot https://github.com/jenovafm/Veronica.git /root/userbot
+RUN git clone -b Veronica https://github.com/jenovafm/Veronica.git /root/userbot
 RUN mkdir /root/userbot/.bin
 RUN pip install --upgrade pip setuptools
 WORKDIR /root/userbot
