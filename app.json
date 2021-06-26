@@ -1,6 +1,6 @@
 {
-  "name": "Kaisar-userbot",
-  "description": "[Kaisar-userbot] USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
+  "name": "Veronica Assistant",
+  "description": "[Veronica] Premium Only.",
   "logo": "https://telegra.ph/file/609c527f4408a5b755a56.jpg",
   "keywords": [
     "telegram",
@@ -9,9 +9,9 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/kenkannih/Kaisar-userbot",
-  "telegram": "https://t.me/kenkanasw",
-  "success_url": "https://t.me/kenkanasw",
+  "repository": "https://github.com/jenovafm/Veronica",
+  "instagram": "https://instagram.com/jenovafm",
+  "success_url": "https://www.jenovafm.com",
   "stack": "container",
   "env": {
     "API_KEY": {
