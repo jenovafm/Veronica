@@ -164,7 +164,7 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**▶️**Kaisar-userbot Versi:** \n "
+            "**▶️**Veronica Assistant Versi:** \n "
             f"{verout}"
             "\n**▶️**Revisi:**\n "
             f"{revout}"
@@ -223,17 +223,17 @@ async def pipcheck(pip):
         await pip.edit("Gunakan `.help pip` Untuk Melihat Contoh")
 
 
-@register(outgoing=True, pattern=r"(?:kaisar|kaisaron)")
+@register(outgoing=True, pattern=r"(?:veronica|veronicaon)")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     await alive.edit("`I'M ALIVE!`")
     await alive.edit("⚡")
     output = (
-        f" **┗┓KAISAR USERBOT┏┛** \n"
+        f" **┗┓Veronica Assistant┏┛** \n"
         f"\n__**{Kaisar_TEKS_KUSTOM}**__\n"
         f"**━━━━━━━━━━━━━━━━━━━━**\n"
-        f"**🏆 ᴋᴀɪꜱᴀʀ** \n"
+        f"**🏆 Owner** \n"
         f" ➥ `{DEFAULTUSER}` \n"
         f"**🏆 ᴜsᴇʀɴᴀᴍᴇ** \n"
         f" ➥ `@{user.username}` \n"
@@ -269,14 +269,14 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"**▬▬▬▬▬▬❙۩🏆۩❙▬▬▬▬▬▬**\n"
-        f"     **♕ KAISAR USERBOT ♕** \n\n"
-        f"❃ **Kaisar**     \n   ➥ `{DEFAULTUSER}` \n"
+        f"     **♕ VeronicaAssistant ♕** \n\n"
+        f"❃ **Owner**     \n   ➥ `{DEFAULTUSER}` \n"
         f"❃ **Username** \n   ➥ `@{user.username}` \n"
         f"❃ **Telethon** \n   ➥ `Versi {version.__version__}` \n"
         f"❃ **Python**   \n   ➥ `Versi {python_version()}` \n"
         f"❃ **Versi Bot**\n   ➥ `{BOT_VER}` \n"
         f"❃ **Modul**    \n   ➥ `{len(modules)}` \n\n"
-        f"❃ **Repo Userbot:** [Kaisar-userbot](https://github.com/kenkannih/Kaisar-userbot)\n❃ **Grup Userbot: **[Tekan](t.me/musikkugroup)\n❃ **Pemilik:** [KEN KAN](t.me/kenkanasw)\n"
+        f"❃ **Instagram:** [JenovaFM](https://instagram.com/jenovafm)\n❃ **Grup Userbot: **[Tekan](www.jenovafm.com)\n"
         f"**▬▬▬▬▬▬❙۩★۩❙▬▬▬▬▬▬**")
     if ALIVE_LOGO:
         try:
@@ -305,17 +305,16 @@ async def amireallyalive(alive):
     await alive.edit("`I'M ALIVE!`")
     await alive.edit("⚡")
     output = (
-        f"**🔆 KAISAR USERBOT 🔆** \n\n"
+        f"**🔆 Veronica Assistant USERBOT 🔆** \n\n"
         f"┏━━━━━━━━━━━━━━━━━━━ \n"
-        f"┣|• `Kaisar     :`{DEFAULTUSER} \n"
+        f"┣|• `Owner     :`{DEFAULTUSER} \n"
         f"┣|• `Username :`@{user.username} \n"
         f"┣|• `Telethon :`Ver {version.__version__} \n"
         f"┣|• `Python   :`Ver {python_version()} \n"
         f"┣|• `Branch   :`{UPSTREAM_REPO_BRANCH} \n"
         f"┣|• `Bot Ver  :`{BOT_VER} \n"
         f"┣|• `Modules  :`{len(modules)} Modules \n"
-        f"┗━━━━━━━━━━━━━━━━━━━ \n\n"
-        f"[Repo](https://github.com/kenkannih/Kaisar-userbot) | [Grup Support](t.me/musikkugroup) | [Owner](t.me/kenkanasw)")
+        f"┗━━━━━━━━━━━━━━━━━━━ \n\n")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO

@@ -19,11 +19,11 @@ from userbot import CMD_HELP, bot
 async def ultiny(event):
     reply = await event.get_reply_message()
     if not (reply and (reply.media)):
-        await event.edit("`Kaisar, Mohon Balas Ke Sticker`")
+        await event.edit("`[Info] Mohon Balas Ke Sticker`")
         return
     xx = await event.edit("`Memproses Tiny....`")
     ik = await bot.download_media(reply)
-    im1 = Image.open("KaisarUserbot/Kaisaruserbot.png")
+    im1 = Image.open("VeronicaAssistant/Veronica_Assistant.png")
     if ik.endswith(".tgs"):
         await event.client.download_media(reply, "ult.tgs")
         os.system("lottie_convert.py ult.tgs json.json")

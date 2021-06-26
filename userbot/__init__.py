@@ -2,8 +2,6 @@
 #
 # Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
-# inline credit @keselekpermen69
-# Pengguna Kaisar-userbot
 """ Userbot initialization. """
 
 import os
@@ -101,9 +99,9 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/kenkannih/Kaisar-userbot.git")
+    "https://github.com/jenovafm/Veronica.git")
 UPSTREAM_REPO_BRANCH = os.environ.get(
-    "UPSTREAM_REPO_BRANCH", "Kaisar-userbot")
+    "UPSTREAM_REPO_BRANCH", "Veronica")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -167,10 +165,10 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN", None)
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "Kaisar-userbot")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "Veronica Assistant")
 
 # Bot version
-BOT_VER = os.environ.get("BOT_VER", "4.0")
+BOT_VER = os.environ.get("BOT_VER", "1.0")
 
 # Default .alive username
 ALIVE_USERNAME = os.environ.get("ALIVE_USERNAME", None)
@@ -319,7 +317,7 @@ with bot:
 
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, "```『Kaisar-Userbot Telah Aktif』```")
+    await bot.send_message(BOTLOG_CHATID, "```『Veronica:Active』```")
     return
 
 with bot:
@@ -389,9 +387,9 @@ with bot:
         @tgbot.on(events.NewMessage(pattern="/start"))
         async def handler(event):
             if event.message.from_id != uid:
-                await event.repl("Kaisar-userbot, Buat Userbot Mu Sendiri [Tekan Disini](https://github.com/kenkannih/Kaisar-userbot)")
+                await event.repl("Veronica, Pesan Bot > [Tekan Disini](https://instagram.com/jenovafm)")
             else:
-                await event.reply(f"`Hai Kaisar {ALIVE_NAME}\n\nApa Kabarmu?`")
+                await event.reply(f"`Hi,{ALIVE_NAME}\n\nApa Kabarmu?`")
 
         @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
         async def inline_handler(event):
@@ -402,8 +400,8 @@ with bot:
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = builder.article(
                     "Harap Gunakan .help Untuk Perintah",
-                    text="{}\n\n**❃ Jumlah Modul Yang Tersedia:** `{}`\n               \n**❃ Daftar Modul Kaisar Userbot:** \n".format(
-                        "**🏆 Kaisar-userbot**",
+                    text="{}\n\n*> Jumlah Modul Yang Tersedia :** `{}`\n               \n**> Daftar Module Userbot:** \n".format(
+                        "**Veronica Assistant**",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -411,22 +409,22 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Kaisar✗Userbot ",
-                    text="Daftar Modul",
+                    "Bantuan Veronica",
+                    text="Daftar Module",
                     buttons=[],
                     link_preview=True)
             else:
                 result = builder.article(
-                    "**Kaisar✗Userbot**",
-                    text="""**Anda Bisa Membuat Kaisar Userbot Anda Sendiri Dengan Cara:** [Tekan Disini](t.me/musikkugroup)""",
+                    "**[ Veronica Assistant ]**",
+                    text="""**Anda Bisa Memesan Userbot Anda Sendiri Dengan Cara:** [Tekan Disini](http://instagram.com/jenovafm)""",
                     buttons=[
                         [
                             custom.Button.url(
-                                "Repo Kaisar-userbot",
-                                "https://github.com/kenkannih/Kaisar-userbot"),
+                                "Contact",
+                                "http://instagram.com/jenovafm"),
                             custom.Button.url(
-                                "Pemilik Repo",
-                                "t.me/kenkanasw")],
+                                "Creator",
+                                "http://instagram.com/jenovafm")],
                     ],
                     link_preview=False,
                 )
@@ -446,7 +444,7 @@ with bot:
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = f"Harap Deploy Kaisar Userbot Anda Sendiri, Jangan Menggunakan Milik Kaisar {ALIVE_NAME} ツ"
+                reply_pop_up_alert = f"Harap Deploy Assist Userbot Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} ツ"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -464,7 +462,7 @@ with bot:
                 # https://t.me/TelethonChat/115200
                 await event.edit(buttons=buttons)
             else:
-                reply_pop_up_alert = f"Harap Deploy Kaisar Userbot Anda Sendiri, Jangan Menggunakan Milik Kaisar {ALIVE_NAME} ツ"
+                reply_pop_up_alert = f"Harap Deploy Assist Userbot Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} ツ"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -495,7 +493,7 @@ with bot:
                     )
                 )
             else:
-                reply_pop_up_alert = f"Harap Deploy Kaisar Userbot Anda Sendiri, Jangan Menggunakan Milik Kaisar {ALIVE_NAME} ツ"
+                reply_pop_up_alert = f"Harap Deploy Assist Userbot Anda Sendiri, Jangan Menggunakan Milik {ALIVE_NAME} ツ"
 
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 

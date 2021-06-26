@@ -15,11 +15,11 @@ async def gps(event):
     input_str = event.pattern_match.group(1)
 
     if not input_str:
-        return await event.edit("`Kaisar Mohon Berikan Tempat Yang Dicari`")
+        return await event.edit("`[Info] Mohon Berikan Tempat Yang Dicari`")
 
     await event.edit("`Menemukan Lokasi Ini Di Server Map....`")
 
-    geolocator = Nominatim(user_agent="Kaisar")
+    geolocator = Nominatim(user_agent="VeronicaAssistant")
     geoloc = geolocator.geocode(input_str)
 
     if geoloc:
@@ -35,7 +35,7 @@ async def gps(event):
         )
         await event.delete()
     else:
-        await event.edit("`Kaisar Saya Tidak Dapat Menemukannya`")
+        await event.edit("`[Info] Saya Tidak Dapat Menemukannya`")
 
 CMD_HELP.update({
     "gps":

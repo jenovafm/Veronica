@@ -18,7 +18,7 @@ from userbot.events import register
 async def _(event):
     try:
         query = event.pattern_match.group(1)
-        await event.edit("`Mohon Menunggu Kaisar Saya Sedang Mencari Wallpaper.....`")
+        await event.edit("`Mohon Menunggu , Veronica Sedang Mencari Wallpaper.....`")
         async with bot.conversation("@SaitamaRobot") as conv:
             try:
                 query1 = await conv.send_message(f"/wall {query}")

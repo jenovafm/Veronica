@@ -24,10 +24,10 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 AFKSTR = [
-    f"**• ᴍᴀᴀꜰ ᴋᴀɪꜱᴀʀ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ!**",
-    f"**• ᴍᴀᴀꜰ ᴋᴀɪꜱᴀʀ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n • ᴛᴜɴɢɢᴜ ꜱᴀᴍᴘᴀɪ ᴅɪᴀ ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ!**",
-    f"**• ᴋᴀɪꜱᴀʀ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ!\n • ᴛᴜɴɢɢᴜʟᴀʜ ꜱᴀᴍᴘᴀɪ ᴏɴʟɪɴᴇ!**",
-    f"**• ᴍᴀᴀꜰ ᴋᴀɪꜱᴀʀ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ!**",
+    f"**• ᴍᴀᴀꜰ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ!**",
+    f"**• ᴍᴀᴀꜰ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ\n • ᴛᴜɴɢɢᴜ ꜱᴀᴍᴘᴀɪ ᴅɪᴀ ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ!**",
+    f"**• {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ!\n • ᴛᴜɴɢɢᴜʟᴀʜ ꜱᴀᴍᴘᴀɪ ᴏɴʟɪɴᴇ!**",
+    f"**• ᴍᴀᴀꜰ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴀꜰᴋ!**",
 ]
 
 
@@ -62,16 +62,16 @@ async def set_afk(afk_e):
     afk_start = start_1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit(f"ཌKαisαrད\n**• ᴋᴀɪꜱᴀʀ ᴛᴇʟᴀʜ ᴀꜰᴋ**\
+        await afk_e.edit(f"VeronicaAssistant\n**• Veronica ᴛᴇʟᴀʜ ᴀꜰᴋ**\
         \n**• ᴀʟᴀꜱᴀɴ :** `{string}`")
     else:
-        await afk_e.edit("ཌKαisαrད\n**• ᴋᴀɪꜱᴀʀ ᴛᴇʟᴀʜ ᴀꜰᴋ**")
+        await afk_e.edit("VeronicaAssistant\n**• Veronica ᴛᴇʟᴀʜ ᴀꜰᴋ**")
     if user.last_name:
         await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name=user.last_name + "「AFK」"))
     else:
         await afk_e.client(UpdateProfileRequest(first_name=user.first_name, last_name="「AFK」"))
     if BOTLOG:
-        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\n**Kaisar Telah AFK!**")
+        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\n**Veronica Assistant Telah AFK!**")
     ISAFK = True
     afk_time = datetime.now()  # pylint:disable=E0602
     raise StopPropagation
@@ -98,7 +98,7 @@ async def type_afk_is_not_true(notafk):
     afk_end = back_alive.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.respond("**ᴋᴀɪꜱᴀʀ ᴛᴇʟᴀʜ ᴋᴇᴍʙᴀʟɪ !!**")
+        msg = await notafk.respond("**Veronica ᴛᴇʟᴀʜ ᴋᴇᴍʙᴀʟɪ !!**")
         time.sleep(3)
         await msg.delete()
         await notafk.client(UpdateProfileRequest(first_name=user.first_name, last_name=last1))
@@ -166,7 +166,7 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)} Detik`"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"ཌKαisαrད\n`{ALIVE_NAME}` **ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
+                    await mention.reply(f"Veronica Assistant\n`{ALIVE_NAME}` **ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
                         \n**• ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
                 else:
                     await mention.reply(str(choice(AFKSTR)))
@@ -175,7 +175,7 @@ async def mention_afk(mention):
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await mention.reply(f"ཌKαisαrད\n**ᴋᴀɪꜱᴀʀ ᴍᴀꜱɪʜ ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
+                        await mention.reply(f"Veronica Assistant\n**Veronica ᴍᴀꜱɪʜ ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
                             \n**• ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
                     else:
                         await mention.reply(str(choice(AFKSTR)))
@@ -243,7 +243,7 @@ async def afk_on_pm(sender):
                 afk_since = f"`{int(seconds)} Detik`"
             if sender.sender_id not in USERS:
                 if AFKREASON:
-                    await sender.reply(f"ཌKαisαrད\n**ᴋᴀɪꜱᴀʀ ᴍᴀꜱɪʜ ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
+                    await sender.reply(f"Veronica\n**Veronica ᴍᴀꜱɪʜ ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
                             \n**• ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
                 else:
                     await sender.reply(str(choice(AFKSTR)))
@@ -252,7 +252,7 @@ async def afk_on_pm(sender):
             elif apprv and sender.sender_id in USERS:
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await sender.reply(f"ཌKαisαrད\n**ᴋᴀɪꜱᴀʀ ᴍᴀꜱɪʜ ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
+                        await sender.reply(f"Veronica\n**Veronica ᴍᴀꜱɪʜ ᴀꜰᴋ** {afk_since} **ʏᴀɴɢ ʟᴀʟᴜ.**\
                             \n**• ᴀʟᴀꜱᴀɴ :** `{AFKREASON}`")
                     else:
                         await sender.reply(str(choice(AFKSTR)))

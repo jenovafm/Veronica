@@ -65,23 +65,23 @@ async def sleepybot(time):
 @register(outgoing=True, pattern="^.shutdown$")
 async def killdabot(event):
     """ For .shutdown command, shut the bot down."""
-    await event.edit("`Mematikan Kaisar-userbot....`")
+    await event.edit("`Mematikan Veronica Assistant....`")
     await asyncio.sleep(7)
     await event.delete()
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#SHUTDOWN \n"
-                                        "`Kaisar-userbot Telah Dimatikan`")
+                                        "`Veronica Assistant Telah Dimatikan`")
     await bot.disconnect()
 
 
 @register(outgoing=True, pattern="^.restart$")
 async def killdabot(event):
-    await event.edit("`Restarting Kaisar-userbot...`")
+    await event.edit("`Restarting Veronica Assistant...`")
     await asyncio.sleep(10)
     await event.delete()
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#RESTARTBOT \n"
-                                        "`Kaisar-userbot Telah Di Restart`")
+                                        "`Veronica Assistant Telah Di Restart`")
     await bot.disconnect()
     # Spin a new instance of bot
     execl(sys.executable, sys.executable, *sys.argv)
@@ -93,13 +93,8 @@ async def killdabot(event):
 async def reedme(e):
     await e.edit(
         "Here's something for you to read:\n"
-        "\n[Kaisar-userbot Repo](https://github.com/kenkannih/Kaisar-userbot/blob/Kaisar-userbot/README.md)"
-        "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
-        "\n[Setup Guide - Google Drive](https://telegra.ph/How-To-Setup-GDrive-11-02)"
-        "\n[Setup Guide - LastFM Module](https://telegra.ph/How-to-set-up-LastFM-module-for-Paperplane-userbot-11-02)"
-        "\n[Video Tutorial - 576p](https://mega.nz/#!ErwCESbJ!1ZvYAKdTEfb6y1FnqqiLhHH9vZg4UB2QZNYL9fbQ9vs)"
-        "\n[Video Tutorial - 1080p](https://mega.nz/#!x3JVhYwR!u7Uj0nvD8_CyyARrdKrFqlZEBFTnSVEiqts36HBMr-o)"
-        "\n[Special - Note](https://telegra.ph/Special-Note-11-02)")
+        "\n[JenovaFM](https://instagram.com/jenovafm)"
+        "\n[Website](https://www.jenovafm.com)")
 
 
 @register(outgoing=True, pattern="^.repeat (.*)")
@@ -120,7 +115,7 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
-        "❃ **Repo Userbot:** [Kaisar-userbot](https://github.com/kenkannih/Kaisar-userbot)\n❃ **Pemilik:** [KEN KAN](t.me/kenkanasw)"
+        "❃ **Veronica:** [Assistant](https://instagram.com/jenovafm)\n❃ **Owner:** [JenovaFM](http://www.jenovafm.com)"
     )
 
 
@@ -159,7 +154,7 @@ async def okgoogle(img):
         photo = io.BytesIO()
         await bot.download_media(message, photo)
     else:
-        await img.edit("`Harap Balas Di Gambar Kaisar`")
+        await img.edit("`Harap Balas Di Gambar `")
         return
 
     if photo:

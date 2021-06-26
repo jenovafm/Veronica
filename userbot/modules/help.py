@@ -15,7 +15,7 @@ async def help(Kaisar):
         if args in CMD_HELP:
             await Kaisar.edit(str(CMD_HELP[args]))
         else:
-            await Kaisar.edit("**Maaf Kaisar, Saya Tidak Punya Perintah Itu ツ**")
+            await Kaisar.edit("**Maaf Veronica, Saya Tidak Punya Perintah Itu ツ**")
             await asyncio.sleep(200)
             await Kaisar.delete()
     else:
@@ -29,9 +29,9 @@ async def help(Kaisar):
                         "**🔵 MODULES 4:**\n"
                         "`glitch`  `gps`  `hash`  `base64`  `hentai`  `heroku`  `id`  `imgmeme`  `kekuatan`\n\n"
                         "**🔵 MODULES 5:**\n"
-                        "`lastfm`  `locks`  `Kaisar`  `aeshtetic`  `deteksi`  `Kaisarfun`  `Kaisarhelper`  `hazmat`\n\n"
+                        "`lastfm`  `locks`  `Veronica Assistant`  `aeshtetic`  `deteksi`  `VeronicaAssistantfun`  `VeronicaAssistanthelper`  `hazmat`\n\n"
                         "**🔵 MODULES 6:**\n"
-                        "`instagram`  `amongus`  `Kaisarmemes`  `misc`  `app`  `undelete`  `grab`  `clone`\n\n"
+                        "`instagram`  `amongus`  `VeronicaAssistantmemes`  `misc`  `app`  `undelete`  `grab`  `clone`\n\n"
                         "**🔵 MODULES 7:**\n"
                         "`randomprofil`  `song`  `tiny`  `tempmail`  `tiktok`  `wordcloud`\n\n" 
                         "**🔵 MODULES 8:**\n"
@@ -52,6 +52,6 @@ async def help(Kaisar):
                         "`webupload`  `welcome`  `whois`  `ping`  `sinyal`  `xiaomi`  `zipfile`\n\n"
                         "**🔵 MODULES 16:**\n"
                         "`inviteall` `gencc`")
-        await Kaisar.reply("\n**CARA MENGGUNAKAN,** **CONTOH:**\n**KETIK** `.help afk` **UNTUK INFORMASI MODULES**\n**GROUP SUPPORT:** [TEKAN](t.me/musikkugroup)")
+        await Kaisar.reply("\n**CARA MENGGUNAKAN,** **CONTOH:**\n**KETIK** `.help afk` **UNTUK INFORMASI MODULES**\n**GROUP SUPPORT:** [TEKAN](http://instagram.com/jenovafm)")
         await asyncio.sleep(100)
         await Kaisar.delete()

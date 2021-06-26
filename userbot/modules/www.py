@@ -60,7 +60,7 @@ async def pingme(pong):
     duration = (end - start).microseconds / 1000
     await pong.edit(f"**𖣘 PING** "
                     f"\n  ➥ `%sms` \n"
-                    f"**𖣘 Kaisar** "
+                    f"**[ Veronica ]** "
                     f"\n  ➥ `{ALIVE_NAME}` \n" % (duration))
 
 
@@ -70,14 +70,10 @@ async def pingme(pong):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
     await pong.edit("⚡")
-    await pong.edit("__**KAISAR⚡**__")
-    await pong.edit("__**KAISA⚡R**__")
-    await pong.edit("__**KAIS⚡AR**__")
-    await pong.edit("__**KAI⚡SAR**__")
-    await pong.edit("__**⚡KAISAR⚡**__")
+    await pong.edit("__**⚡Veronica⚡**__")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**⚡Kaisar ping⚡**\n"
+    await pong.edit(f"**⚡Veronica Veronica⚡**\n"
                     f"⚡ **ᴘɪɴɢ:** "
                     f"`%sms` \n"
                     f"⚡ **ᴏɴʟɪɴᴇ:** "
@@ -110,12 +106,12 @@ async def pingme(pong):
     await pong.edit("**✦҈͜͡➳ PONG!**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"**🏆 Kaisar Ping 🏆**\n"
+    await pong.edit(f"**[ Veronica Ping ]**\n"
                     f"❃ **Ping:** "
                     f"`%sms` \n"
                     f"❃ **Uptime:** "
                     f"`{uptime}` \n"
-                    f"**✦҈͜͡➳ My Kaisar:** `{ALIVE_NAME}`" % (duration))
+                    f"**✦҈͜͡➳ VeronicaUser :** `{ALIVE_NAME}`" % (duration))
 
 
 @register(outgoing=True, pattern="^.sinyal$")
@@ -132,8 +128,8 @@ async def pingme(pong):
     await pong.edit("**100% ██████████**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit(f"- 𝐋 𝐎 𝐑 𝐃 -\n"
-                    f"**• ꜱɪɴʏᴀʟ  :** "
+    await pong.edit(f"- Veronica -\n"
+                    f"**• Sɪɴʏᴀʟ  :** "
                     f"`%sms` \n"
                     f"**• ᴏɴʟɪɴᴇ  :** "
                     f"`{uptime}` \n"
@@ -164,7 +160,7 @@ async def speedtst(spd):
                    f"`{result['ping']}` \n"
                    "❃ **ISP:** "
                    f"`{result['client']['isp']}` \n"
-                   "❃ **BOT:** `Kaisar Userbot`")
+                   "❃ **BOT:** `Veronica Assistant`")
 
 
 def speed_convert(size):
@@ -192,7 +188,7 @@ async def pingme(pong):
     await pong.edit("`Pong🔨.....`")
     end = datetime.now()
     duration = (end - start).microseconds / 9000
-    await pong.edit("✘ **Ping!**\n`%sms`" % (duration))
+    await pong.edit("**Ping!**\n`%sms`" % (duration))
 
 CMD_HELP.update(
     {"ping": "`.ping` ; `.lping` ; `.xping` ; `.fping`\

@@ -31,7 +31,7 @@ async def _(event):
         except YouBlockedUserError:
             await Kaisar.edit("`Mohon buka blokir` @TempMailBot `lalu coba lagi`")
             return
-        await event.edit(f"**Kaisar TEMPMAIL** ~ `{response.message.message}`\n\n[KLIK DISINI UNTUK VERIFIKASI]({Kaisaruserbot})")
+        await event.edit(f"**Veronica Assistant TEMPMAIL** ~ `{response.message.message}`\n\n[KLIK DISINI UNTUK VERIFIKASI]({Kaisaruserbot})")
 
 
 # KEN KAN Ganteng

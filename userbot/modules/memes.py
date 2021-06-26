@@ -1404,7 +1404,7 @@ async def weebify(e):
         get = await e.get_reply_message()
         args = get.text
     if not args:
-        await e.edit("`Apa Yang Anda Lakukan Kaisar ツ`")
+        await e.edit("`Apa Yang Anda Lakukan ツ`")
         return
     string = '  '.join(args).lower()
     for normiecharacter in string:
@@ -1424,7 +1424,7 @@ async def claptext(memereview):
     elif textx:
         message = textx.text
     else:
-        return await memereview.edit("`Kaisar, Mohon Balas Ke Pesan Orang Yang Ingin Anda Puji ツ`")
+        return await memereview.edit("`[Info] Mohon Balas Ke Pesan Orang Yang Ingin Anda Puji ツ`")
     reply_text = "👏 "
     reply_text += message.replace(" ", " 👏 ")
     reply_text += " 👏"
@@ -1543,7 +1543,7 @@ async def typewriter(typew):
 @register(outgoing=True, pattern=r"^\.leave$")
 async def leave(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("`Kaisar Telah Meninggalkan Grup ツ`")
+        await e.edit("`Veronica Assistant Telah Meninggalkan Grup ツ`")
 
 
 @register(outgoing=True, pattern=r"^\.fail$")
@@ -1872,5 +1872,5 @@ CMD_HELP.update({
     "\n> `.fag` `.gtfo`; `.stfu` `.lol` `.lool` `.fail` `.leave`"
     "\n> `.iwi` `.sayhi` `.koc` `.gas` `.earth` `.love` `.rain`"
     "\n> `.penis` `.emo` `.fuck` `.skull`  `.monyet`\nUsage: Cobain aja"
-    "\n\n\n**Semoga Harimu Menyenangkan**\n➥ `KEN KAN`"
+    "\n\n\n**Semoga Harimu Menyenangkan**\n➥ `VeronicaAssistant`"
 })

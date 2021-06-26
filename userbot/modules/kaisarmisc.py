@@ -143,7 +143,7 @@ async def _(event):
         for i in a:
             await event.reply(i.original.action.message)
     else:
-        await event.edit("Kaisar Anda memerlukan izin Admin untuk melakukan perintah ini")
+        await event.edit("Anda memerlukan izin Admin untuk melakukan perintah ini")
         await asyncio.sleep(3)
         await event.delete()
 
@@ -418,7 +418,7 @@ async def _(event):
         else:
             await event.edit("File Tidak ditemukan{}".format(input_str))
     else:
-        await event.edit("`Mohon Balas Ke Media Kaisar`")
+        await event.edit("`Mohon Balas Ke Media`")
 
 
 @register(outgoing=True, pattern="^.grab(?: |$)(.*)")
@@ -721,7 +721,7 @@ async def weebify(event):
         get = await event.get_reply_message()
         args = get.text
     if not args:
-        await event.edit("`Kaisar, Teks Apa Yang Harus Saya Weebify Kan?`")
+        await event.edit("`[Info] Teks Apa Yang Harus Saya Weebify Kan?`")
         return
     string = ' '.join(args).lower()
     for normiecharacter in string:
@@ -768,7 +768,7 @@ async def thicc(bolded):
         get = await bolded.get_reply_message()
         args = get.text
     if not args:
-        await bolded.edit("`Kaisar, Teks Apa Yang Harus Saya Bold Kan?`")
+        await bolded.edit("`[Info] Teks Apa Yang Harus Saya Bold Kan?`")
         return
     string = ''.join(args).lower()
     for normiecharacter in string:
@@ -815,7 +815,7 @@ async def mediv(medievalx):
         get = await medievalx.get_reply_message()
         args = get.text
     if not args:
-        await medievalx.edit("`Kaisar, Teks Apa Yang Harus Saya Medibold Kan?`")
+        await medievalx.edit("`[Info] Teks Apa Yang Harus Saya Medibold Kan?`")
         return
     string = ''.join(args).lower()
     for normiecharacter in string:
@@ -862,7 +862,7 @@ async def doublex(doublestrucktx):
         get = await doublestrucktx.get_reply_message()
         args = get.text
     if not args:
-        await doublestrucktx.edit("`Kaisar, Teks Apa Yang Harus Saya Double Struck Kan?`")
+        await doublestrucktx.edit("[Info] Teks Apa Yang Harus Saya Double Struck Kan?`")
         return
     string = ''.join(args).lower()
     for normiecharacter in string:
@@ -909,7 +909,7 @@ async def cursive2(cursivebolded):
         get = await cursivebolded.get_reply_message()
         args = get.text
     if not args:
-        await cursivebolded.edit("`Kaisar, Teks Apa Yang Harus Saya Cursive Bold Kan?`")
+        await cursivebolded.edit("`[Info] Teks Apa Yang Harus Saya Cursive Bold Kan?`")
         return
     string = ''.join(args).lower()
     for normiecharacter in string:
@@ -957,7 +957,7 @@ async def medival22(medivallite):
         get = await medivallite.get_reply_message()
         args = get.text
     if not args:
-        await medivallite.edit("`Kaisar, Teks Apa Yang Harus Saya Medival Kan?`")
+        await medivallite.edit("`[Info] Teks Apa Yang Harus Saya Medival Kan?`")
         return
     string = ''.join(args).lower()
     for normiecharacter in string:
@@ -1004,7 +1004,7 @@ async def xcursive(cursivelite):
         get = await cursivelite.get_reply_message()
         args = get.text
     if not args:
-        await cursivelite.edit("`Kaisar, Teks Apa Yang Harus Saya Cursive Kan?`")
+        await cursivelite.edit("`[Info] Teks Apa Yang Harus Saya Cursive Kan?`")
         return
     string = ''.join(args).lower()
     for normiecharacter in string:

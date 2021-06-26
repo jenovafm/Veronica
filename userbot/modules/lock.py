@@ -69,10 +69,10 @@ async def locks(event):
         what = "Semuanya"
     else:
         if not input_str:
-            await event.edit("`Mohon Maaf Kaisar, Apa Yang Harus Saya Kunci? ヅ`")
+            await event.edit("`Mohon Maaf , Apa Yang Harus Saya Kunci? ヅ`")
             return
         else:
-            await event.edit(f"`Kaisar Jenis Yang Mau Anda Kunci Tidak Valid` `{input_str}`")
+            await event.edit(f"`Jenis Yang Mau Anda Kunci Tidak Valid` `{input_str}`")
             return
 
     lock_rights = ChatBannedRights(
@@ -92,10 +92,10 @@ async def locks(event):
         await event.client(
             EditChatDefaultBannedRightsRequest(peer=peer_id,
                                                banned_rights=lock_rights))
-        await event.edit(f"`Kaisar Telah Mengunci {what} Untuk Obrolan Ini ヅ`")
+        await event.edit(f"`Veronica Telah Mengunci {what} Untuk Obrolan Ini ヅ`")
     except BaseException as e:
         await event.edit(
-            f"`Apakah Kaisar Mempunyai Izin Melakukan Itu Disini?`\n**Kesalahan:** {str(e)}")
+            f"`Apakah Veronica Mempunyai Izin Melakukan Itu Disini?`\n**Kesalahan:** {str(e)}")
         return
 
 
@@ -157,10 +157,10 @@ async def rem_locks(event):
         what = "Semuanya"
     else:
         if not input_str:
-            await event.edit("`Apa Yang Harus Saya Buka Kaisar ヅ`")
+            await event.edit("`Apa Yang Harus Saya Buka ? ヅ`")
             return
         else:
-            await event.edit(f"`Kaisar Jenis Kunci Yang Mau Anda Buka Tidak Valid` `{input_str}`")
+            await event.edit(f"`Jenis Kunci Yang Mau Anda Buka Tidak Valid` `{input_str}`")
             return
 
     unlock_rights = ChatBannedRights(
@@ -180,10 +180,10 @@ async def rem_locks(event):
         await event.client(
             EditChatDefaultBannedRightsRequest(peer=peer_id,
                                                banned_rights=unlock_rights))
-        await event.edit(f"`Kaisar Telah Membuka Kunci {what} Untuk Obrolan Ini ヅ`")
+        await event.edit(f"`Veronica Telah Membuka Kunci {what} Untuk Obrolan Ini ヅ`")
     except BaseException as e:
         await event.edit(
-            f"`Apakah Kaisar Mempunyai Izin Melakukan Itu Disini?`\n**Kesalahan:** {str(e)}")
+            f"`Apakah Veronica Mempunyai Izin Melakukan Itu Disini?`\n**Kesalahan:** {str(e)}")
         return
 
 

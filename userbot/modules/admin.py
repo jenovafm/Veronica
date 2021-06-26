@@ -36,14 +36,14 @@ from userbot.events import register
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "`Gambar Terlalu Kecil`"
 PP_ERROR = "`Gagal Memproses Gambar`"
-NO_ADMIN = "`Kaisar Bukan Admin:)`"
-NO_PERM = "`Kaisar Tidak Mempunyai Izin!`"
+NO_ADMIN = "`Aku Bukan Admin:)`"
+NO_PERM = "`Aku Tidak Mempunyai Izin!`"
 NO_SQL = "`Berjalan Pada Mode Non-SQL`"
 
 CHAT_PP_CHANGED = "`Berhasil Mengubah Profil Grup`"
 CHAT_PP_ERROR = (
     "`Ada Masalah Dengan Memperbarui Foto,`"
-    "`Mungkin Karna Kaisar Bukan Admin,`"
+    "`Mungkin Karna Veronica Bukan Admin,`"
     "`Atau Tidak Mempunyai Izin.`"
 )
 INVALID_MEDIA = "`Media Tidak Valid`"
@@ -80,7 +80,7 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 @register(outgoing=True, pattern=r"^\.setgpic$")
 async def set_group_photo(gpic):
     if not gpic.is_group:
-        await gpic.edit("`Kaisar Mohon Lakukan Perintah Ini Di Grup.`")
+        await gpic.edit("`Veronica Mohon Lakukan Perintah Ini Di Grup.`")
         return
     replymsg = await gpic.get_reply_message()
     chat = await gpic.get_chat()
@@ -157,9 +157,9 @@ async def promote(promt):
     if BOTLOG:
         await promt.client.send_message(
             BOTLOG_CHATID,
-            "#PROMOSI\n"
-            f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
-            f"GRUP: {promt.chat.title}(`{promt.chat_id}`)",
+            "[PROMOTE]\n"
+            f"[Username]: [{user.first_name}](tg://user?id={user.id})\n"
+            f"[Grup]: {promt.chat.title}(`{promt.chat_id}`)",
         )
 
 
@@ -206,9 +206,9 @@ async def demote(dmod):
     if BOTLOG:
         await dmod.client.send_message(
             BOTLOG_CHATID,
-            "#MENURUNKAN\n"
-            f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
-            f"GRUP: {dmod.chat.title}(`{dmod.chat_id}`)",
+            "[DEMOTE]\n"
+            f"[Username]: [{user.first_name}](tg://user?id={user.id})\n"
+            f"[Group]: {dmod.chat.title}(`{dmod.chat_id}`)",
         )
 
 
@@ -259,9 +259,9 @@ async def ban(bon):
     if BOTLOG:
         await bon.client.send_message(
             BOTLOG_CHATID,
-            "#BAN\n"
-            f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
-            f"GRUP: {bon.chat.title}(`{bon.chat_id}`)",
+            "[BANNED]\n"
+            f"[Username]: [{user.first_name}](tg://user?id={user.id})\n"
+            f"[Group]: {bon.chat.title}(`{bon.chat_id}`)",
         )
 
 
@@ -293,9 +293,9 @@ async def nothanos(unbon):
         if BOTLOG:
             await unbon.client.send_message(
                 BOTLOG_CHATID,
-                "#UNBAN\n"
-                f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
-                f"GRUP: {unbon.chat.title}(`{unbon.chat_id}`)",
+                "[UNBANNED]\n"
+                f"[Username]: [{user.first_name}](tg://user?id={user.id})\n"
+                f"[Group]: {unbon.chat.title}(`{unbon.chat_id}`)",
             )
     except UserIdInvalidError:
         await unbon.edit("`Sepertinya Terjadi Kesalahan!`")
@@ -347,9 +347,9 @@ async def spider(spdr):
             if BOTLOG:
                 await spdr.client.send_message(
                     BOTLOG_CHATID,
-                    "#MUTE\n"
-                    f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
-                    f"GRUP: {spdr.chat.title}(`{spdr.chat_id}`)",
+                    "[MUTE]\n"
+                    f"[Username]: [{user.first_name}](tg://user?id={user.id})\n"
+                    f"[Group]: {spdr.chat.title}(`{spdr.chat_id}`)",
                 )
         except UserIdInvalidError:
             return await spdr.edit("`Terjadi Kesalahan!`")
@@ -394,9 +394,9 @@ async def unmoot(unmot):
         if BOTLOG:
             await unmot.client.send_message(
                 BOTLOG_CHATID,
-                "#UNMUTE\n"
-                f"PENGGUNA: [{user.first_name}](tg://user?id={user.id})\n"
-                f"GRUP: {unmot.chat.title}(`{unmot.chat_id}`)",
+                "[UNMUTE]\n"
+                f"[Username]: [{user.first_name}](tg://user?id={user.id})\n"
+                f"[Group]: {unmot.chat.title}(`{unmot.chat_id}`)",
             )
 
 
@@ -540,9 +540,9 @@ async def rm_deletedacc(show):
 
     # Well
     if not admin and not creator:
-        return await show.edit("`Kaisar Bukan Admin Disini!`")
+        return await show.edit("`Veronica Bukan Admin Disini!`")
 
-    await show.edit("`Menghapus Akun Terhapus...\nMohon Menunggu Kaisar Sedang Dalam Proses`")
+    await show.edit("`Menghapus Akun Terhapus...\nMohon Menunggu Veronica Sedang Dalam Proses`")
     del_u = 0
     del_a = 0
 
@@ -553,7 +553,7 @@ async def rm_deletedacc(show):
                     EditBannedRequest(show.chat_id, user.id, BANNED_RIGHTS)
                 )
             except ChatAdminRequiredError:
-                return await show.edit("`Kaisar Tidak Memiliki Izin Banned Dalam Grup Ini`")
+                return await show.edit("`Veronica Tidak Memiliki Izin Banned Dalam Grup Ini`")
             except UserAdminInvalidError:
                 del_u -= 1
                 del_a += 1
@@ -585,7 +585,7 @@ async def rm_deletedacc(show):
 async def get_admin(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
-    mentions = f"<b>✥ Daftar Admin Grup {title}:</b> \n"
+    mentions = f"<b>[ Daftar Admin Grup {title} ]:</b> \n"
     try:
         async for user in show.client.iter_participants(
             show.chat_id, filter=ChannelParticipantsAdmins
@@ -715,7 +715,7 @@ async def get_users(show):
     try:
         await show.edit(mentions)
     except MessageTooLongError:
-        await show.edit("Kaisar, Grup Ini Terlalu Besar Mengunggah Daftar Pengguna Sebagai File.")
+        await show.edit("Veronica, Grup Ini Terlalu Besar Mengunggah Daftar Pengguna Sebagai File.")
         file = open("daftarpengguna.txt", "w+")
         file.write(mentions)
         file.close()
@@ -806,7 +806,7 @@ async def get_usersdel(show):
         await show.edit(mentions)
     except MessageTooLongError:
         await show.edit(
-            "Kaisar, Grup Ini Terlalu Besar, Mengunggah Daftar Akun Terhapus Sebagai File."
+            "Veronica, Grup Ini Terlalu Besar, Mengunggah Daftar Akun Terhapus Sebagai File."
         )
         file = open("daftarpengguna.txt", "w+")
         file.write(mentions)
@@ -871,7 +871,7 @@ async def get_userdel_from_id(user, event):
 async def get_bots(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
-    mentions = f"<b>Daftar Bot Di {title}:</b>\n"
+    mentions = f"<b>[ Daftar Bot Di {title} ]</b>\n"
     try:
         if isinstance(show.to_id, PeerChat):
             return await show.edit("`Saya mendengar bahwa hanya Supergrup yang dapat memiliki bot`")
@@ -890,7 +890,7 @@ async def get_bots(show):
     try:
         await show.edit(mentions, parse_mode="html")
     except MessageTooLongError:
-        await show.edit("Kaisar, Terlalu Banyak Bot Di Grup Ini, Mengunggah Daftar Bot Sebagai File.")
+        await show.edit("Veronica, Terlalu Banyak Bot Di Grup Ini, Mengunggah Daftar Bot Sebagai File.")
         file = open("botlist.txt", "w+")
         file.write(mentions)
         file.close()

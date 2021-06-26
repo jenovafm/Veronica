@@ -203,7 +203,7 @@ async def _(dyno):
         return await dyno.reply(
             "`Please make sure your Heroku API Key, Your App name are configured correctly in the heroku var.`"
         )
-    await dyno.edit("`Sedang Mengambil Logs Kaisar ヅ`")
+    await dyno.edit("`Sedang Mengambil Logs VeronicaAssistant ヅ`")
     with open("logs.txt", "w") as log:
         log.write(app.get_log())
     fd = codecs.open("logs.txt", "r", encoding="utf-8")
@@ -211,7 +211,7 @@ async def _(dyno):
     key = (requests.post("https://nekobin.com/api/documents",
                          json={"content": data}) .json() .get("result") .get("key"))
     url = f"https://nekobin.com/raw/{key}"
-    await dyno.edit(f"`Ini Logs Heroku Anda Kaisar:`\n\nPaste Ke: [Nekobin]({url})")
+    await dyno.edit(f"`Ini Logs Heroku Anda :`\n\nPaste Ke: [Nekobin]({url})")
     return os.remove("logs.txt")
 
 
@@ -219,7 +219,7 @@ CMD_HELP.update({"heroku": ">.`usage`"
                  "\nUsage: Check Dyno Heroku"
                  "\n\n>`.set var <NEW VAR> <VALUE>`"
                  "\nUsage: Tambahkan Variabel Baru Atau Memperbarui Variabel"
-                 "\nSetelah Menyetel Variabel Kaisar-userbot Akan Di Restart."
+                 "\nSetelah Menyetel Variabel VeronicaAssistant Akan Di Restart."
                  "\n\n>`.get var or .get var <VAR>`"
                  "\nUsage: Dapatkan Variabel Yang Ada, Gunakan Hanya Di Grup Privasi Anda!"
                  "\nIni Mengembalikan Semua Informasi Pribadi Anda, Harap berhati-hati."
